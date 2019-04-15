@@ -26,7 +26,7 @@ if __name__ == '__main__':
     start_time = time.time()
     
     for img in range(len(images)):
-        humans = e.inference(img, resize_to_default=(w > 0 and h > 0), upsample_size=args.resize_out_ratio)
+        humans = e.inference(images[img], resize_to_default=(w > 0 and h > 0), upsample_size=args.resize_out_ratio)
 
     print('Average FPS:', len(images) / (time.time() - start_time))
 
